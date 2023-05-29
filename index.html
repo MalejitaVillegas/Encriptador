@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles2.css" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="letter">
+            <img src="img/vector.png" width="40px" height="40px" alt="" />
+        </div>
+        <div class="encriptar">
+            <textarea name="texto" class="texto" id="texto" cols="40" rows="10"
+                placeholder="Ingresa el texto aquí"></textarea>
+
+            <div>
+                <div class="terminos">
+                    <p> <span>@</span>Solo letras minúsculas y sin acentos.</p>
+                </div>
+                <div class="botones" style="display: flex; flex-direction: row; justify-content:space-between ;">
+                    <button class="btn-encriptar" type="button" style="width: 49%;" onclick="encriptar()">
+                        Encriptar
+                    </button>
+                    <input style="width: 49%;" type="button" class="btn-desencriptar" value="Desencriptar"
+                        onclick="desencriptar()" />
+                </div>
+            </div>
+
+        </div>
+
+        <div id="encriptadoContainer" class="encriptado">
+            <div style="display: flex; flex-direction: column;">
+                <img src="img/muñeco.png" alt="" id="muñeco" width="100%" height="304px" />
+                <div class="mensaje-encriptado" id="mensaje-encriptado">
+                    <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                    <p id="parrafo">
+                        Ingresa el texto que deseas encriptar o desencriptar
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="copiarContainer" class="copiar" style="display:none;">
+            <div>
+                <p id="copiarText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes,
+                    sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet.
+                    Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis
+                    fames id diam feugiat aliquet non egestas.</p>
+            </div>
+
+            <input type="button" class="btn-copiar" value="Copiar" onclick="copiarTexto()" />
+
+
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
